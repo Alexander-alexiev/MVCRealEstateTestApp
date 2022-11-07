@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home Page: @ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="~/css/Site.css" rel="stylesheet" />
+    @RenderSection("head", false)
+    <div class="container-fluid" align="center">
+        <img src="~/img/Logo.jpg" width="300" height="150" />
+    </div>
+</head>
+<body>
+
+    <header class="container-fluid">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+            <h1 class="navbar-brand"><i class="fas fa-search-location fa-2x"></i> RealEstates Point!</h1>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navMenu" class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="App" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="App" asp-action="Contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="App" asp-action="About">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="App" asp-action="Shop">Shop</a>
+                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <h2 class="text-center">@ViewBag.Title</h2>
+        @RenderBody()
+    </section>
+    <footer class="container">
+        <div class="text-center">Best on the market since 1999!</div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/Index.js"></script>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>

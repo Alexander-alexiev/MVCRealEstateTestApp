@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "We have the best offers!";
+    
+}
+<div class="row">
+    <div class="col-md-9">
+        <h1>Current Offers</h1>
+        <div class="product-info">
+            <img class="stock-image" src="~/img/Bistritza.JPG" />
+            <h2>House</h2>
+            <ul class="product-props">
+                <li>Price: $120 000</li>
+                <li>Location: Bistritza</li>
+                <li>Area: 65sqm</li>
+                <li>Additional info: Place to park</li>
+            </ul>
+            <button id="request-visit" class="btn btn-success">Request a visit</button>
+        </div>
+        <div id="the-form">
+            <form>
+                <label>Name:</label>
+                <br />
+                <input />
+                <br />
+                <label>Email:</label>
+                <br />
+                <input type="email" />
+                <br />
+                <label>Subject:</label>
+                <br />
+                <input type="text" />
+                <br />
+                <label>Message:</label>
+                <br />
+                <textarea rows="4"></textarea>
+                <br />
+                <input type="submit" value="Send Request" />
+            </form>
+        </div>
+
+        <div>
+            <div id="login-toggle">Login</div>
+            <form class="popup-form">
+                <div>
+                    <label>Username</label>
+                    <input />
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" />
+                </div>
+                <div>
+                    <input type="checkbox" />
+                    <label>Remember me</label>
+                </div>
+                <div>
+                    <input type="submit" value="Login" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-3">More to come...</div>
+</div>

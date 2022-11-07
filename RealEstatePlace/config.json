@@ -1,0 +1,19 @@
+{
+  "Colors": {
+    "Favorite": "Blue"
+  },
+  "ConnectionStrings": {
+    "RealEstateContextDb": "Data Source=(localdb)\\ProjectsV13;Initial Catalog=RealEstateDb;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets = true;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  },
+  "Tokens": {
+    "Key": "jifi2##@jiiasdl@l",
+    "Issuer": "http://localhost:8888",
+    "Audience": "http://localhost:8888"
+  }
+}

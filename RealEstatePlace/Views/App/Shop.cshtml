@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Product>
+@section Scripts{
+    <script src="~/client/runtime.8a527dc20351e4ff.js"></script>
+    <script src="~/client/polyfills.94870a3f2dfac2e3.js"></script>
+    <script src="~/client/main.87c55fa769fed9ab.js" asp-append-version="true"></script>
+}
+@section head{
+    <link href="~/client/styles.ef46db3751d8e999.css" rel="stylesheet" />
+}
+<the-shop></the-shop>
+@*<h1>Shop</h1>
+    <p>Count: @Model.Count()</p>*@
+@*<div class="row">
+        @foreach (var p in Model)
+        {
+            <div class="col-md-3">
+                <div class="border bg-light rounded p-1">
+                    <img class="stock-image" src="~/img/@(p.Neighborhood).JPG" class="img-fluid" alt="@p.DateUntilPriceIsValid"/>
+                    <h2>@p.Category - @p.Size</h2>
+                    <ul class="product-props">
+                        <li>Price: @p.Price</li>
+                        <li>Location: @p.Town</li>
+                        <li>Area: @p.Neighborhood</li>
+                        <li>Additional info: @p.Description</li>
+                    </ul>
+                    <button id="request-visit" class="btn btn-success">Request a visit</button>
+                </div>
+            </div>
+        }
+    </div>*@
